@@ -1,21 +1,21 @@
-            Deploy a Dockerized Web App using Ansible Playbook on Kubernetes Cluster
+#### Deploy a Dockerized Web App using Ansible Playbook on Kubernetes Cluster
 This project demonstrates how to deploy a Dockerized Flask web application on a custom Kubernetes cluster using Ansible Playbooks. The control node is an Ansible pod running inside the cluster, and the target node is a separate Kubernetes pod where the web app gets deployed.
 
 - Folder Structure
 
-ansible-flask-k8s/
-├── ansible/
-│   ├── build_image.yml
-│   ├── deploy_app.yml
-│   └── inventory
-├── flask-app/
-│   ├── app.py
-│   ├── Dockerfile
-│   └── requirements.txt
-├── k8s/
-│   ├── flask-deployment.yml
-│   └── flask-service.yml
-└── README.md
+- ansible-flask-k8s/
+ - ansible/
+   - build_image.yml
+   - deploy_app.yml
+   - inventory
+ - flask-app/
+   - app.py
+   - Dockerfile
+   - requirements.txt
+ - k8s/
+   - flask-deployment.yml
+   - flask-service.yml
+ - README.md
   
   Project Overview
 
@@ -64,16 +64,18 @@ ansible-flask-k8s/
   Kubernetes deployment and service YAMLs manage the app.
 
 - Screenshots
-  Step	  Screenshot
-  Pod Running in Kubernetes	<img src="./screenshots/k8s-pod-running.png" width="500"/>
-  Flask App UI Output	<img src="./screenshots/flask-app-k8s-ui.png" width="500"/>
+  
+  Step	                             |   Screenshot
+  - Pod Running in Kubernetes	     |   <img src="./screenshots/k8s-pod-running.png" width="500"/>
+  - Flask App UI Output	             |   <img src="./screenshots/flask-app-k8s-ui.png" width="500"/>
 
 - What I Learned
-  Created a fully functional Ansible control node inside a Kubernetes pod.
+ 
+   Created a fully functional Ansible control node inside a Kubernetes pod.
 
-  Automated Docker image builds and container deployment using Ansible.
+   Automated Docker image builds and container deployment using Ansible.
 
-  Understood how Kubernetes pods can serve as both control and target environments.
+   Understood how Kubernetes pods can serve as both control and target environments.
 
-  Combined Ansible with Kubernetes to manage application deployment in a declarative and reproducible manner.
+   Combined Ansible with Kubernetes to manage application deployment in a declarative and reproducible manner.
 
