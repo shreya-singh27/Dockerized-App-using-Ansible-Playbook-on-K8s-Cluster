@@ -1,21 +1,10 @@
-#### Deploy a Dockerized Web App using Ansible Playbook on Kubernetes Cluster
+# Deploy a Dockerized Web App using Ansible Playbook on Kubernetes Cluster
+
 This project demonstrates how to deploy a Dockerized Flask web application on a custom Kubernetes cluster using Ansible Playbooks. The control node is an Ansible pod running inside the cluster, and the target node is a separate Kubernetes pod where the web app gets deployed.
 
 - Folder Structure
+<pre><code>## Folder Structure ansible-flask-k8s/ ├── ansible/ │ ├── build_image.yml │ ├── deploy_app.yml │ └── inventory ├── flask-app/ │ ├── app.py │ ├── Dockerfile │ └── requirements.txt ├── k8s/ │ ├── flask-deployment.yml │ └── flask-service.yml ├── screenshots/ │ └── (your screenshot files) └── README.md </code></pre>
 
-- ansible-flask-k8s/
- - ansible/
-   - build_image.yml
-   - deploy_app.yml
-   - inventory
- - flask-app/
-   - app.py
-   - Dockerfile
-   - requirements.txt
- - k8s/
-   - flask-deployment.yml
-   - flask-service.yml
- - README.md
   
   Project Overview
 
@@ -63,11 +52,25 @@ This project demonstrates how to deploy a Dockerized Flask web application on a 
 
   Kubernetes deployment and service YAMLs manage the app.
 
-- Screenshots
+
+### Screenshots
+
+####  Step: Pod Running in Kubernetes
+
+Below is a screenshot of the pods running in the Kubernetes cluster:
+
+![Kubernetes Pods Running](screenshots/k8s-pod-running.png)
+
+---
+
+####  Step: Flask App UI Output
+
+This screenshot shows the output of the Flask app running inside the Kubernetes pod:
+
+![Flask UI Output](screenshots/flask-ui.png)
+
   
-  Step	                             |   Screenshot
-  - Pod Running in Kubernetes	     |   <img src="./screenshots/k8s-pod-running.png" width="500"/>
-  - Flask App UI Output	             |   <img src="./screenshots/flask-app-k8s-ui.png" width="500"/>
+  
 
 - What I Learned
  
