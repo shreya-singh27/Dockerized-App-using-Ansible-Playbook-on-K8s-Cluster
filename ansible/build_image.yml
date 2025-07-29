@@ -1,0 +1,12 @@
+
+---
+- name: Build Docker Image for Flask App
+  hosts: localhost
+  tasks:
+    - name: Build image using Docker
+      community.docker.docker_image:
+        name: flask-k8s-app
+        tag: latest
+        source: build
+        build:
+          path: ../app

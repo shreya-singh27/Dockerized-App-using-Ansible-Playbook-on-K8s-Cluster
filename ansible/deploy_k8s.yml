@@ -1,0 +1,19 @@
+---
+- name: Deploy Flask App to Kubernetes
+  hosts: localhost
+  tasks:
+    - name: Apply Deployment YAML
+      ansible.builtin.shell: kubectl apply -f ../k8s/flask-deployment.yml
+      register: deploy_output
+
+    - name: Print Deployment Output
+      debug:
+        var: deploy_output.stdout
+
+    - name: Apply Service YAML
+      ansible.builtin.shell: kubectl apply -f ../k8s/flask-service.yml
+      register: service_output
+
+    - name: Print Service Output
+      debug:
+        var: service_output.stdout
